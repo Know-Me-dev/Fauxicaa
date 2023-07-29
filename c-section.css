@@ -1,0 +1,418 @@
+/* ~~~~~~~~~~ Collection Section ~~~~~~~~~~~~ */
+
+
+.collection-div{
+    margin: 3rem 0;
+}
+
+.collection-div-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Playfair display', sans-serif;
+}
+
+.collection-title{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    margin: .4rem 0;
+    /* border: 1px solid blue; */
+}
+
+
+.collection-container{
+    
+    display: flex;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+    height: auto;
+}
+
+
+
+.collection-image-jacket{
+    
+   
+    border-top-left-radius: 8px;
+    border-bottom-left-radius:8px ;
+    /* border: 2px solid red; */
+    background: url(jacket.jpg) no-repeat top;
+    min-height: 370px;
+    min-width: 400px;
+    background-size: 170%;
+    transition: all 500ms ease-out;
+    position: relative;
+}
+
+.collection-shop{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0%;
+    background-color:rgb(76, 78, 77,.8) ; 
+    transition: all 500ms ease-out;
+    border-radius: 0px 0px 8px 8px;
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(1px);
+-moz-backdrop-filter: blur(1px); */
+}
+
+
+
+.shop-div{
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+}
+
+.shop-div:hover .arrow-svg{
+    transform: translate(230%, -44%);
+    -ms-transform: translate(230%, -44%);
+    transition: transform 300ms ease-out;
+}
+
+
+.shop-text
+{
+    white-space: nowrap; 
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+   
+}
+
+.shop-text:hover{
+    text-decoration: underline;
+}
+
+.arrow-svg{
+    white-space: nowrap; 
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -45%);
+    -ms-transform: translate(200%, -45%);
+    transition: transform 300ms ease-out;
+}
+
+ 
+
+.collection-image-jacket:hover .collection-shop,
+.collection-image-sweater:hover .collection-shop,
+.collection-image-shoes:hover .collection-shop{
+    height: 20%;
+    
+}
+
+.collection-image-sweater{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius:8px ;
+    /* border: 2px solid red; */
+    background: url(sweater.jpg) no-repeat left;
+    min-height: 370px;
+    min-width: 400px;
+    background-size: 100%;
+    transition: all 500ms ease-out;
+    position: relative;
+}
+
+
+.collection-image-shoes{
+    
+    position: relative;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius:8px ;
+    /* border: 2px solid red; */
+    background: url(shoes1.jpg) no-repeat ;
+    min-height: 370px;
+    min-width: 400px;
+    background-size: 100%;
+    transition: all 500ms ease-out;
+    
+}
+
+.collection-image-jacket:hover
+{
+    background-size: 185%;
+    transition: all 500ms ease-out;
+    
+}
+
+.collection-image-sweater:hover,
+.collection-image-shoes:hover{
+    background-size: 110%;
+    transition: all 500ms ease-out;
+    
+}
+
+
+.collection-desc{
+    border: 1px solid ;
+    border-radius: 0px 8px 8px 0px ;
+    border-left: none;
+}
+
+.collection-desc-sweater{
+    border: 1px solid;
+    border-right: none;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.collection-para{
+    text-align: center;
+    padding: 1.55rem 4.15rem;
+    line-height: 1.6;
+    font-size: 16px;
+    
+}
+
+.more-div{
+
+    
+    align-items: center;
+    /* border: 1px solid; */
+    margin: 0 auto;
+    margin-top: -3.55rem;
+    /* margin-right: 3rem; */
+    position: relative;
+    margin-bottom: 6rem;
+    max-width: 1500px;
+}
+
+.more-slide{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 1%;
+    width: 7%;
+}
+
+.more-text{
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    
+}
+
+.more-text:hover{
+    text-decoration: underline;
+}
+
+.arrow-more{
+    transition: transform 300ms ease-out;
+}
+
+.more-slide:hover .arrow-more {
+    transform: translate(30%);
+    transition: transform 300ms ease-out;
+}
+
+
+
+@media (max-width:1045px){
+
+    .collection-div{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "one two"
+            "three three";
+        gap: 1rem;    
+    }
+
+    .collection-container{
+        /* border: 3px solid green; */
+        flex-direction: column;
+        /* min-width: 400px; */
+       /* flex-wrap: wrap; */
+        /* justify-content: center; */
+    }
+    .container-one {
+        grid-area: one;
+    }
+    
+    .container-two {
+        grid-area: two;
+    }
+    
+    .container-three {
+        grid-area: three;
+        flex-direction: row;
+        
+    }
+   
+
+
+
+
+    .collection-image-jacket{
+       min-width: 270px;
+       background-size: 170%;
+       background-position: top;
+       min-height: 410px;
+       border-radius:8px 8px 0px 0px ;
+    }
+
+    .container-one .collection-desc{
+       border-radius: 0px 0px 8px 8px;
+       border-top: none;
+       border-left: 1px solid;
+    }
+
+    .collection-image-sweater{
+        /* background-size: 100%; */
+        min-width: 270px;
+        /* min-height: 400px; */
+        border-radius: 0px 0px 8px 8px ;
+    }
+
+     .collection-desc-sweater{
+        border-radius: 8px 8px 0px 0px;
+        border-bottom: none;
+        border-right: 1px solid;
+    }
+ 
+    .collection-image-shoes{
+        min-width:270px ;
+        /* background-size: 100%; */
+        /* min-height: 200px; */
+        /* background-position: center; */
+    }
+
+    .collection-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .collection-para{
+        padding: .1rem 1.25rem 1.25rem 1.25rem;
+        line-height: 1.5;
+        font-size: 15px;
+        /* margin: auto 0; */
+        
+        /* border: 1px solid; */
+    }
+
+    .more-div{
+        margin-left: -19rem;
+        margin-top: -7rem;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+    .collection-div{
+        /* border: 2px solid blue; */
+        display: flex;
+        flex-wrap: wrap;
+        /* gap:.4rem; */
+        width: 70%;
+        margin: auto;
+    }
+   
+
+    .collection-image-jacket{
+        background-size: 152%;
+        min-height: 320px;
+        background-position: top;
+    }
+
+    .collection-image-jacket:hover{
+        background-size: 165%;
+        
+    }
+    
+    .container-three{
+        flex-direction: column;
+    }
+
+    
+    .collection-image-sweater,
+    .collection-image-shoes{
+        background-size: 105%;
+    }
+
+    .collection-image-shoes{
+        border-radius: 8px 8px 0px 0px ;
+        /* background-size: fill; */
+    }
+  
+    .container-three .collection-desc{
+        border-radius: 0px 0px 8px 8px;
+        border-top: none;
+        border-left: 1px solid;
+    }
+
+    .shop-text{
+        cursor: pointer;
+    }
+
+    .more-div{
+        
+        margin: -3rem auto auto -53rem;
+    }
+
+
+}
+
+
+@media (max-width:468px){
+
+    .collection-div{
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid yellow; */
+    }
+    .collection-image-jacket{
+        background-size: 180%;
+        min-width: 220px;
+        /* max-height: 370px; */
+    }
+
+    .collection-image-jacket:hover{
+        background-size: 190%;
+        
+    }
+
+    .collection-image-sweater,
+    .collection-image-shoes{
+        min-width: 220px;
+    }
+
+    .collection-image-sweater,
+    .collection-image-shoes{
+        background-size: 120%;
+    }
+
+    .collection-image-sweater:hover,
+    .collection-image-shoes:hover{
+        background-size: 130%;
+    }
+    
+}
